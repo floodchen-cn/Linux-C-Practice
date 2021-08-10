@@ -27,31 +27,31 @@ int main()
     permutation(0);
     return 0;
 }        
-void permutation (int offset)
+void permutation (int flag)
 {
-    int i, temp;
-    if (offset == N - 1)
+    int i;
+    if (flag == N - 1)//flag等于N-1相当于到了数组的尽头
     {
         out_print();
         return;
     }
     else
     {
-        for ( i = offset; i < N; i++)
+        for ( i = flag; i < N; i++)
         {
-            swap(i, offset);
-            permutation(offset + 1);
-            swap(i, offset);
+            swap(i, flag);//交换a[i]以及a[flag]
+            permutation(flag + 1);//
+            swap(i, flag);
         }
         
     }
     
 }
-void swap(int offset, int i)
+void swap(int flag, int i)
 {
     int temp;
-    temp = a[offset];
-    a[offset] = a[i];
+    temp = a[flag];
+    a[flag] = a[i];
     a[i] = temp;
 }
 void out_print()
