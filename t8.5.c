@@ -16,13 +16,13 @@
 
 int main(void)
 {
-	char gesture[3][10] = { "scissor", "stone", "cloth" };
+	char gesture[3][10] = { "剪刀", "石头", "布" };
 	int man, computer, result, ret;
 
 	srand(time(NULL));
 	while (1) {
 		computer = rand() % 3;
-	  	printf("\nInput your gesture (0-scissor 1-stone 2-cloth):\n");
+	  	printf("\nInput your gesture (0-剪刀 1-石头 2-布):\n");
 		ret = scanf("%d", &man);
 	  	if (ret != 1 || man < 0 || man > 2) {
 			printf("Invalid input! Please input 0, 1 or 2.\n");
@@ -33,11 +33,11 @@ int main(void)
 
 		result = (man - computer + 4) % 3 - 1;
 		if (result > 0)
-			printf("You win!\n");
+			printf("赢了!\n");
 		else if (result == 0)
-			printf("Draw!\n");
+			printf("打平!\n");
 		else
-			printf("You lose!\n");
+			printf("输了!\n");
 	}
 	return 0;
 }
