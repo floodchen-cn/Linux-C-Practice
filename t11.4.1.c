@@ -12,7 +12,7 @@
 **********************************************************************************/
 #include <stdio.h>
 #define LEN 8
-int a[LEN] = {8, 7, 6, 5, 4, 3, 2, 1};
+int a[LEN] = {8,7,6,5,4,3,2,1};
 void out_print()
 {
     for (int i = 0; i < LEN; i++)
@@ -61,6 +61,6 @@ void quicksort(int start, int end)
 }
 int main()
 {
-    quicksort(0 ,8);
+    quicksort(0 ,LEN);
     return 0;
 }
